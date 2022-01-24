@@ -1,0 +1,9 @@
+@mixin tablet-view {
+   @media (min-width: 768px){ @content; }
+}
+@mixin laptop-view {
+   @media (min-width: 1024px){ @content; }
+}
+@mixin xl-view {
+   @media (min-width: 1440px){ @content; }
+}

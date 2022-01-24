@@ -1,0 +1,83 @@
+@import './variables', './breakpoints';
+
+.header{
+   display: flex;
+   position: fixed;
+   background-color: $primary;
+   align-items: center;
+   justify-content: space-between;
+   width: 100%;
+   padding: 12px;
+   height: 3rem;
+   font-size: 25px;
+   &__logo{
+      &:hover{
+         cursor: pointer;
+      }
+      font-weight: 700;
+   }
+   &__nav{
+      //position: relative;
+      &__btn{
+         @include tablet-view{
+            display: none;
+         }
+         border: none;
+         color: $dark;
+         background-color: $primary;
+         &:hover{
+            border: solid 2px $dark;
+            border-radius: 5px;
+            cursor: pointer;
+         }
+      }
+      &__list__inline{
+         display: none;
+         @include tablet-view{
+            display: flex;
+            list-style: none;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 18px;
+            font-weight: 600;
+            &__item{
+               margin-left: 12px;
+               &:hover{
+                  text-decoration: underline;
+                  cursor: pointer;
+               }
+            }
+
+         }
+      }
+      &__list{
+         @include tablet-view{
+            display: none;
+         }
+         display: flex;
+         flex-direction: column;
+         list-style: none;
+         position: absolute;
+         border: solid $dark;
+         border-radius: 5px;
+         background-color: $primary;
+         padding: 0;
+         top: 3rem;
+         right: 0;
+         height: 13rem;
+         width: 13rem;
+         font-weight: 400;
+         align-items: center;
+         justify-content: center;
+         &__item{
+            //margin: 12px auto;
+            margin-bottom: 12px;
+            height: 2rem;
+            &:hover{
+               cursor: pointer;
+               text-decoration: underline;
+            }
+         }
+      }
+   }
+}
