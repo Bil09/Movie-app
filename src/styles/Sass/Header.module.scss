@@ -2,7 +2,7 @@
 
 .header{
    display: flex;
-   position: fixed;
+   position: sticky;
    background-color: $primary;
    align-items: center;
    justify-content: space-between;

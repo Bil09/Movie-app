@@ -7,6 +7,8 @@ body{
    min-height: 100vh;
    background-color: $dark;
 }
-#root{
+
+html, body, #root, .App {
    height: 100%;
-}
+ }
+ 
