@@ -8,7 +8,6 @@ function App() {
     <Fragment>
       <Header />
       <Content />
-      <div>hello</div>
     </Fragment>
   );
 }

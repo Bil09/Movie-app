@@ -5,6 +5,14 @@
 $dark: rgb(29, 28, 28);
 $light: rgb(255, 255, 255);
 $primary: rgb(255, 255, 108);
+@mixin neon-primary {
+   border: 1px solid yellow;
+   box-shadow:
+      0 0 7px $primary, 
+      0 0 10px $primary, 
+      0 0 21px $primary; 
+}
+
 
 //font
 

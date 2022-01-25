@@ -1,8 +1,44 @@
 @import './variables', './breakpoints';
 
-.content__div{
+.content{
    height: 90%;
    width: 100%;
    border: solid 1px red;
    color: white;
+   display: flex;
+   flex-direction: column;
+   padding: 1.5rem;
+   @include laptop-view{
+      padding: 5rem;
+   }
+   &__section{
+      margin-bottom: 1.5rem;
+      padding: 0;
+   }
+   &__title{
+      margin-bottom: 8px
+   }
+   &__row{
+      display: flex;
+      height: 30%;
+      width: 100%;
+      overflow-x: auto;
+      &::-webkit-scrollbar{
+         height: 3px;
+      }
+      &::-webkit-scrollbar-thumb{
+         background: $primary;
+         @include neon-primary;
+      }
+      &__img{
+         height: 50%;
+         width: 30%;
+         margin-right: 12px;
+         margin-bottom: 10px;
+         &:hover{
+            @include neon-primary
+         }
+
+      }
+   }
 }
