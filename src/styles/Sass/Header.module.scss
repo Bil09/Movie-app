@@ -3,6 +3,7 @@
 .header{
    display: flex;
    position: sticky;
+   z-index: 99;
    background-color: $primary;
    align-items: center;
    justify-content: space-between;

@@ -23,6 +23,8 @@
       height: 30%;
       width: 100%;
       overflow-x: auto;
+      overflow-y: hidden;
+      
       &::-webkit-scrollbar{
          height: 3px;
       }
@@ -30,15 +32,36 @@
          background: $primary;
          @include neon-primary;
       }
-      &__img{
-         height: 50%;
+      //image wrapper
+      &__image{
+         position: relative;
+         flex-shrink: 0;
+         height: 90%;
          width: 30%;
          margin-right: 12px;
          margin-bottom: 10px;
          &:hover{
             @include neon-primary
          }
-
+         //img
+         &__img{
+            height: 100%;
+            width: 100%;
+         }
+         //overlay
+         &__overlay{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 20%;
+            transition: opacity 1.2s ease;
+            opacity: 0;
+            &:hover{
+               height: 80%;
+               opacity: 1;
+               background-color: rgba($dark, 0.8);
+            }
+         }
       }
    }
 }
