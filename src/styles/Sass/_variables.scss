@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap');
 //colors
 
-$dark: rgb(29, 28, 28);
+$deep-dark: rgb(0, 0, 0);
+$dark: rgb(29, 29, 29);
+$gray: rgb(102, 102, 102);
 $light: rgb(255, 255, 255);
 $primary: rgb(255, 255, 108);
 @mixin neon-primary {
@@ -17,3 +18,4 @@ $primary: rgb(255, 255, 108);
 //font
 
 $Poppins: 'Poppins', sans-serif;
+$Roboto: 'Roboto Mono', monospace;

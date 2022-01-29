@@ -21,6 +21,10 @@ const Content = () => {
             <h2 className={styles.content__title}>Coming soon</h2>
             <Row />
          </div>
+         <div className={styles.content__section}>
+            <h2 className={styles.content__title}>Your List</h2>
+            <Row />
+         </div>
       </div>
    );
 };
