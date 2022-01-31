@@ -2,6 +2,7 @@ import styles from '../../../styles/Sass/Footer.module.scss';
 import {FaFacebook} from 'react-icons/fa';
 import {FaTwitter} from 'react-icons/fa';
 import {FaInstagram} from 'react-icons/fa';
+import tmdb from '../../../TMDB.svg';
 
 const Footer = () => {
    return(
@@ -28,6 +29,11 @@ const Footer = () => {
                <li className={styles.footer__container__links__social__link}><FaTwitter size={20} /></li>
                <li className={styles.footer__container__links__social__link}><FaInstagram size={20} /></li>
             </ul>
+         </div>
+         <div className={styles.footer__attribut}>
+            <h4 className={styles.footer__attribut__title}>Attributions</h4>
+            <a href='https://www.themoviedb.org/'><img src={tmdb} alt='TMDB' className={styles.footer__attribut__svg} /></a>
+            
          </div>
       </footer>
    );

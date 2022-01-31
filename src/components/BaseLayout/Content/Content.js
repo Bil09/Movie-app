@@ -1,29 +1,26 @@
-import React from "react";
+import React, { useContext } from "react";
 import Row from "./Row";
 import styles from '../../../styles/Sass/Content.module.scss';
+import * as movie from '../../../context/MoviesProvider';
 
 const Content = () => {
+   const top = useContext(movie.topRatedContext); 
+   console.log(top)
+   const up = useContext(movie.upcomingContext);
+   const pop = useContext(movie.popularContext);
    return(
       <div className={styles.content}>
          <div className={styles.content__section}>
-            <h2 className={styles.content__title}>Last relaeses</h2>
-            <Row />
-         </div>
-         <div className={styles.content__section}>
             <h2 className={styles.content__title}>Top rated</h2>
-            <Row />
+            <Row movies={top.results} />
          </div>
          <div className={styles.content__section}>
-            <h2 className={styles.content__title}>Most Viewed</h2>
-            <Row />
+            <h2 className={styles.content__title}>Popular</h2>
+            <Row movies={pop.results} />
          </div>
          <div className={styles.content__section}>
             <h2 className={styles.content__title}>Coming soon</h2>
-            <Row />
-         </div>
-         <div className={styles.content__section}>
-            <h2 className={styles.content__title}>Your List</h2>
-            <Row />
+            <Row movies={up.results} />
          </div>
       </div>
    );

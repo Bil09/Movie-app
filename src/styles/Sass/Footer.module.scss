@@ -15,6 +15,35 @@
    //height: 40%;
    background-color: $deep-dark;
    color: $light;
+   //TMDB
+   &__attribut{
+      width: 40%;
+      @include tablet-view{
+         width: 20%;
+      }
+      @include laptop-view{
+         width: 10%;
+      }
+      &__title{
+         font-size: 18;
+         position: relative;
+         //margin-top: 0.5rem;
+         margin-bottom: 1rem;
+         &::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            color: $primary;
+            background-color: $primary;
+            width: 30px;
+            height: 2px;
+         }
+      }
+      &__svg:hover{
+         cursor: pointer;
+      }
+   }
    &__container{
       //border: solid green;
       display: flex;

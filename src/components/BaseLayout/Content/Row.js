@@ -1,15 +1,14 @@
 import styles from '../../../styles/Sass/Content.module.scss';
-import img from '../../../furious.jpg'
 import Image from './Image';
-import { useContext, useEffect } from 'react';
-import {movieContext} from '../../../context/MoviesProvider';
-const Row = (props) => {
 
-   const movies = useContext(movieContext);
+const Row = (props) => {
+   //top rated
+   const movieList = props.movies;
+   console.log(movieList);
    return(
       <div className={styles.content__row}>
-         {movies.map((movie) => {
-             return <Image Image={movie.posterUrl} key={movie.id} />
+         {movieList && movieList.map((movie) => {
+             return <Image image={'https://image.tmdb.org/t/p/original' +  movie.poster_path} key={movie.id} descri={movie.overview} />
          })}   
       </div>
    );
