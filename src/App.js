@@ -22,41 +22,19 @@ function App() {
   //Effect
   useEffect(() => {
     //top rated
-    const fetchMovie = async () => {
+    const fetchMovie = async (url, setList) => {
       try{
-         const response = await fetch(url_top);
+         const response = await fetch(url);
          const data = await response.json();
-         console.log(`FETCH WITH URL`);
-         setTopRated(data);
+         console.log(data);
+         setList(data);
       } catch (err){
          console.log(err);
       }
    };
-    //popular
-    const fetchMovieV1 = async (url) => {
-      try{
-         const response = await fetch(url_popular);
-         const data = await response.json();
-         console.log(`FETCH WITH URL`);
-         setPopular(data);
-      } catch (err){
-         console.log(err);
-      }
-   };
-    //upcoming
-    const fetchMovieV2 = async (url) => {
-      try{
-         const response = await fetch(url_upcoming);
-         const data = await response.json();
-         console.log(`FETCH WITH URL`);
-         setUpcoming(data);
-      } catch (err){
-         console.log(err);
-      }
-   };
-   fetchMovie();
-   fetchMovieV1();
-   fetchMovieV2();
+   fetchMovie(url_top, setTopRated);
+   fetchMovie(url_upcoming, setUpcoming);
+   fetchMovie(url_popular, setPopular);
   },[])
   //
   return (

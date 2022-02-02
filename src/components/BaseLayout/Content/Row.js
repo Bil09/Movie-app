@@ -8,7 +8,10 @@ const Row = (props) => {
    return(
       <div className={styles.content__row}>
          {movieList && movieList.map((movie) => {
-             return <Image image={'https://image.tmdb.org/t/p/original' +  movie.poster_path} key={movie.id} descri={movie.overview} />
+             return <Image image={'https://image.tmdb.org/t/p/original' +  movie.poster_path} 
+             key={movie.id} 
+             descri={movie.overview}
+             avg={movie.vote_average}  />
          })}   
       </div>
    );
